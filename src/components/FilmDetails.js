@@ -10,9 +10,9 @@ const FilmDetails = ({selectedFilm}) => {
                 <img className="film-image" src={selectedFilm.movie_banner} alt="Film Banner" />
                 <br></br>
                 <p>Original title: {selectedFilm.original_title_romanised}</p>
-                <p>Directed by: {selectedFilm.director}</p>
                 <p>Released date: {selectedFilm.release_date}</p>
-                <p>Running time: {selectedFilm.running_time}</p>
+                <p>Running time: {selectedFilm.running_time} mins</p>
+                <p>Rotten Tomatoes Score: {selectedFilm.rt_score}</p>
                 <br></br>
                 <p>Description: {selectedFilm.description}</p>
 

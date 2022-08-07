@@ -10,6 +10,7 @@ const GhibliContainer = () => {
   const [films, setFilms] = useState([]);
   const [selectedFilm, setSelectedFilm] = useState(null);
   const [director, setDirector] = useState('');
+  
   useEffect(() => {
     getFilms();
   }, []);
@@ -28,6 +29,7 @@ const GhibliContainer = () => {
 
   const onDirectorSelect = (director) => {
     setDirector(director);
+    onFilmSelected("");
   };
 
   const directors = new Set(films.map((film) => film.director));

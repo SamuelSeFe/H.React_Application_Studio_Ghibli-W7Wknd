@@ -1,5 +1,8 @@
 .App {
     margin-left: 20px;
+    margin-right: 20px;
+    border: 2px solid black;
+    padding: 5px;
 }
 
 .single-film-details {
@@ -21,4 +24,19 @@
     max-width: 300px;
     float: right;
     margin-right: 20px;
+}
+
+.directors {
+    border: 1px solid black;
+    width: fit-content;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 2px;
+}
+
+.all-directors {
+    border: 1px solid black;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 2px;
 }
