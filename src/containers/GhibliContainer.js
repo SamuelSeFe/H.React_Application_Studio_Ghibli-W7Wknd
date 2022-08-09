@@ -10,6 +10,7 @@ const GhibliContainer = () => {
   const [films, setFilms] = useState([]);
   const [selectedFilm, setSelectedFilm] = useState(null);
   const [director, setDirector] = useState('');
+  const [directors, setDirectors] = useState([]);
   
   useEffect(() => {
     getFilms();
@@ -19,7 +20,10 @@ const GhibliContainer = () => {
   const getFilms = function() {
     fetch("https://ghibliapi.herokuapp.com/films")
     .then(res => res.json())
-    .then(films => setFilms(films))
+    .then((films) => {
+      setFilms(films)
+      setDirectors( new Set(films.map((film) => film.director)) );
+    })
   };
 
 
@@ -32,7 +36,8 @@ const GhibliContainer = () => {
     onFilmSelected("");
   };
 
-  const directors = new Set(films.map((film) => film.director));
+  // const directors = new Set(films.map((film) => film.director));
+  // Above line was rendered again and moving the directors buttons
 
   let filmsByDirector = films
   if (director){

@@ -7,11 +7,15 @@ const DirectorSelect = ({directors, onDirectorSelect}) => {
     };
 
     const directorsToSelect = [...directors]
-    const directorsNodes = directorsToSelect.map((director) =>
-    <div className="directors">
-        <label htmlFor={director}>{director}</label>
-        <input type="radio" value={director} key={director} id={director} name="director-select" onClick={handleClick}></input>
-    </div>);
+    const directorsNodes = directorsToSelect.map((director) => {
+        return ( 
+            <div className="directors">
+                <label htmlFor={director}>{director}</label>
+                <input type="radio" value={director} key={director} id={director} name="director-select" onClick={handleClick}></input>
+            </div>
+            )
+        }
+    );
 
     return (
         <>

@@ -23,7 +23,7 @@ const FilmSelector = ({films, onFilmSelected}) => {
 
     return (
         <select id="film-selector" defaultValue="" onChange={handleSelect}>
-            <option value="">Choose a Ghibli Film</option>
+            <option value="" selected disabled>Choose a Ghibli Film</option>
             {filmsToSelect}
         </select>
     );
